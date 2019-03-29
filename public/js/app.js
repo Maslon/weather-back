@@ -8,7 +8,7 @@ const forecastOutput = document.querySelector('.forecast');
 form.addEventListener('submit', e => {
 	locationOutput.innerText = 'Loading...';
 	e.preventDefault();
-	fetch(`http://localhost:3000/weather?address=${input.value}`).then(res => {
+	fetch(`/weather?address=${input.value}`).then(res => {
 		res.json().then(data => {
 			console.log(data.err);
 			if (data.err) {
